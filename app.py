@@ -12,7 +12,7 @@ app.secret_key = os.urandom(24)
 #Spotify application credentials
 CLIENT_ID = 'f974da21e2444e569517532cc1c99b3e'
 CLIENT_SECRET = '71ded5b046e94b0482321c9b6fe4272f'
-REDIRECT_URI = 'http://localhost:5000/callback'
+REDIRECT_URI = 'https://loquacious-parfait-671dcd.netlify.app/'
 SPOTIFY_AUTH_URL = 'https://accounts.spotify.com/authorize'
 SPOTIFY_TOKEN_URL = 'https://accounts.spotify.com/api/token'
 
