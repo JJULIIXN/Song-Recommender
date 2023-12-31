@@ -12,13 +12,11 @@ app.secret_key = os.urandom(24)
 #Spotify application credentials
 CLIENT_ID = 'f974da21e2444e569517532cc1c99b3e'
 CLIENT_SECRET = '71ded5b046e94b0482321c9b6fe4272f'
-REDIRECT_URI = 'https://loquacious-parfait-671dcd.netlify.app/'
+REDIRECT_URI = 'http://localhost:5000/callback'
 SPOTIFY_AUTH_URL = 'https://accounts.spotify.com/authorize'
 SPOTIFY_TOKEN_URL = 'https://accounts.spotify.com/api/token'
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+
 
 @app.route('/login')
 def login():
@@ -65,12 +63,6 @@ def callback():
 def home():
     user_data = {}  # Replace with user data from Spotify API
     return render_template('home.html', user_data=user_data)
-
-
-@app.route('/test')
-def test():
-    return render_template('test.html')
-    
 
 
 

@@ -201,6 +201,116 @@ body {
     width: 100%;
 
 }
+/* test */
+.btn-box b{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box b:hover{
+    color: #00abf0;
+}
+
+.btn-box b:nth-child(1){
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box b:nth-child(1):hover{
+    color:#081b29;
+}
+
+.btn-box b:nth-child(1)::before{
+    background: #00abf0;
+}
+
+.btn-box b::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box b:hover::before{
+    width: 100%;
+
+}
+
+/* btnbox c */
+.btn-box c{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+/*
+.btn-box c:hover{
+    color: #00abf0;
+}
+*/
+.btn-box c:nth-child(2){
+    background: transparent;
+    color: #00abf0;
+}
+
+
+.btn-box c:nth-child(2):hover{
+    color:#00abf0;
+}
+
+.btn-box c:nth-child(2)::before{
+    background: #00abf0;
+}
+
+.btn-box c::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box c:hover::before{
+    width: 100%;
+
+}
 
 .home-imgHover{
     position: absolute;
@@ -215,6 +325,8 @@ body {
     pointer-events: none;
 }
 
+
+
 .home-imgHover:hover{
      background: #081b29;
      opacity: .8;
@@ -225,7 +337,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 120%;
+    width: 215%;
     height: 100%;
     background: #081b29;
     animation: showRight 1s ease forwards;
