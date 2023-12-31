@@ -17,7 +17,6 @@ SPOTIFY_AUTH_URL = 'https://accounts.spotify.com/authorize'
 SPOTIFY_TOKEN_URL = 'https://accounts.spotify.com/api/token'
 
 
-
 @app.route('/login')
 def login():
     # Generate a random state token to protect against CSRF
@@ -63,8 +62,6 @@ def callback():
 def home():
     user_data = {}  # Replace with user data from Spotify API
     return render_template('home.html', user_data=user_data)
-
-
 
 
 

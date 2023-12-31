@@ -5,22 +5,21 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Personal Portfolio Website using HTML and CSS only</title>
+        <title>Spooterfy: Discover Your Music</title>
         <!-- links the stylesheet to style.css file-->
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' 
-        rel='stylesheet'>   
-     </head>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>   
+    </head>
 
     <!-- body -->
     <body>
         <header class="header">
             <a href="#" class="logo">Spooterfy.</a>
             
-            <!-- navbar is used to seperate header from other links -->
+            <!-- navbar -->
             <nav class="navbar">
                 <div class="btn-box">
-                    <c href="#" class="ac   tive">Home</c>
+                    <a href="#" class="active">Home</a>
                     <a href="/login">Log In</a>
                 </div>
             </nav>
@@ -30,19 +29,24 @@
             <div class="home-content">
                 <h1>Spooterfy</h1>
                 <h3>Helper App</h3>
-                <p> This app can help you to better understand your music taste, as well as help to expand your music knowledge.</p>
+                <p>This app can help you to better understand your music taste, as well as help to expand your music knowledge, big fart.</p>
                 <div class="btn-box">
                     <a href="#">Top Songs and Artist</a>
                     <a href="#">Song Recommender</a>
                 </div>
             </div>
 
-
+            <!-- Recommended Songs Section -->
+            <div class="recommended-songs">
+                <h2>Recommended Songs</h2>
+                <ul>
+                    {% for song in recommended_songs %}
+                    <li>{{ song }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
 
             <span class="home-imgHover"></span>
-
         </section>
-
     </body>
-
 </html>

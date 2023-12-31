@@ -45,7 +45,7 @@ body {
 
 .navbar a{
     font-size: 18px;
-    color:#ededed;
+    color:#00abf0;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
@@ -343,6 +343,40 @@ body {
     animation: showRight 1s ease forwards;
     animation-delay: 3s;
     z-index: 100;
+}
+/**/
+
+.recommended-songs {
+    padding: 20px 10%;
+    text-align: center;
+}
+
+.recommended-songs h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #00abf0;
+    position: relative;
+}
+
+.recommended-songs ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recommended-songs li {
+    background: #081b29;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #00abf0;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.recommended-songs li:hover {
+    background-color: #00abf0;
+    color: #081b29;
 }
 
 @keyframes showRight{
