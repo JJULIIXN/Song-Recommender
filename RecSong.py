@@ -10,23 +10,27 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="f974da21e2444e56951753
 # Function to fetch user's liked songs
 def get_users_liked_songs():
     results = sp.current_user_saved_tracks()
-    liked_songs = []
+    liked_songs_ids = []
     for idx, item in enumerate(results['items']):
         track = item['track']
-        liked_songs.append(track['name'] + ' - ' + track['artists'][0]['name'])
-    return liked_songs
+        liked_songs_ids.append(track['id'])  # Append only the track ID
+    return liked_songs_ids
 
 # Function to recommend songs based on user's liked songs
-def recommend_songs(based_on_songs):
-    recommendations = sp.recommendations(seed_tracks=based_on_songs, limit=10)
+def recommend_songs(based_on_songs_ids):
+    # Limit the number of seed tracks to 5 (or another number within Spotify's limits)
+    seed_tracks_limited = based_on_songs_ids[:5]  
+    recommendations = sp.recommendations(seed_tracks=seed_tracks_limited, limit=10)
     recommended_songs = []
     for track in recommendations['tracks']:
         recommended_songs.append(track['name'] + ' - ' + track['artists'][0]['name'])
     return recommended_songs
 
+
+
 # Main Program
-liked_songs = get_users_liked_songs()
-recommended_songs = recommend_songs(liked_songs)
+liked_songs_ids = get_users_liked_songs()
+recommended_songs = recommend_songs(liked_songs_ids)
 print("Recommended Songs:")
 for song in recommended_songs:
     print(song)

@@ -52,7 +52,7 @@ def callback():
     }
 
     response = requests.post(SPOTIFY_TOKEN_URL, data=token_data)
-    token_json = response.json()
+    token_json = response.json
 
     access_token = token_json['access_token']
     refresh_token = token_json.get('refresh_token')
