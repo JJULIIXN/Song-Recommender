@@ -374,11 +374,6 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.recommended-songs li:hover {
-    background-color: #00abf0;
-    color: #081b29;
-}
-
 @keyframes showRight{
     100%{
         width: 0;

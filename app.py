@@ -5,6 +5,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import datetime
 
+from RecSong import get_users_liked_songs, recommend_songs
+
 
 app = Flask(__name__, template_folder='templates')
 app.secret_key = os.urandom(24)
@@ -17,7 +19,7 @@ SPOTIFY_AUTH_URL = 'https://accounts.spotify.com/authorize'
 SPOTIFY_TOKEN_URL = 'https://accounts.spotify.com/api/token'
 
 
-@app.route('/login')
+@app.route('/login/')
 def login():
     # Generate a random state token to protect against CSRF
     state = os.urandom(16).hex()
@@ -63,6 +65,11 @@ def home():
     user_data = {}  # Replace with user data from Spotify API
     return render_template('home.html', user_data=user_data)
 
+@app.route('/rec')
+def rec():
+    liked_songs = get_users_liked_songs()  # Fetch user's liked songs
+    recommended_songs = recommend_songs(liked_songs)  # Get recommendations based on liked songs
+    return render_template('rec.html', songs=recommended_songs)  # Note: Changed to rec.html as per your update
 
 
 

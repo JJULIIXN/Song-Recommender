@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommended Songs</title>
+    <!-- Add any additional stylesheet links here -->
+</head>
+<body>
+    <h1>Recommended Songs for You</h1>
+    <ul>
+        {% for song in songs %}
+            <li>{{ song }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
