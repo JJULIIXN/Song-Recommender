@@ -18,19 +18,23 @@ def get_users_liked_songs():
 
 # Function to recommend songs based on user's liked songs
 def recommend_songs(based_on_songs_ids):
-    # Limit the number of seed tracks to 5 (or another number within Spotify's limits)
-    seed_tracks_limited = based_on_songs_ids[:5]  
+    seed_tracks_limited = based_on_songs_ids[:5]  # Limit the number of seed tracks
     recommendations = sp.recommendations(seed_tracks=seed_tracks_limited, limit=10)
     recommended_songs = []
     for track in recommendations['tracks']:
-        recommended_songs.append(track['name'] + ' - ' + track['artists'][0]['name'])
+        # Include the album cover URL in the output
+        song_info = {
+            "name": track['name'],
+            "artist": track['artists'][0]['name'],
+            "album_cover_url": track['album']['images'][0]['url']  # The URL of the album cover
+        }
+        recommended_songs.append(song_info)
     return recommended_songs
-
-
 
 # Main Program
 liked_songs_ids = get_users_liked_songs()
 recommended_songs = recommend_songs(liked_songs_ids)
 print("Recommended Songs:")
 for song in recommended_songs:
-    print(song)
+    print(f"{song['name']} - {song['artist']}")
+

@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #081b29; 
+    color: #00abf0;
+    text-align: center;
+    padding: 20px 10%;
+}
+
+.recommended-songs h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+    margin-bottom: 20px;
+}
+
+.recommended-songs ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recommended-songs li {
+    background-color: #081b29;
+    color: #ededed;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.recommended-songs li:hover {
+    background-color: #00abf0;
+    color: #00abf0;
+}
+
+.recommended-songs img {
+    margin-top: 10px;
+    width: 200px; /* or 100% for responsive design */
+    height: auto;
+    border-radius: 8px; /* Optional for rounded corners */
+}
+
+@media (max-width: 600px) {
+    .recommended-songs li {
+        margin-bottom: 15px;
+    }
+
+    .recommended-songs img {
+        width: 100%;
+    }
+}
