@@ -34,7 +34,7 @@ body {
 
 .recommended-songs li:hover {
     background-color: #00abf0;
-    color: #00abf0;
+    color: #ededed;
 }
 
 .recommended-songs img {
