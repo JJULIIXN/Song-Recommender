@@ -127,15 +127,14 @@ body {
     animation-delay: 1.6s;
 }
 
-.home-content .btn-box{
+/**/
+.home-content .button-container{
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 345px;
-    height: 50px;
+    font-size: 16px;
+    margin: 20px 0 40px;
 }
 
-.home-content .btn-box::before{
+.home-content .button-container::before{
     content: '';
     position: absolute;
     top: 0;
@@ -144,17 +143,23 @@ body {
     height: 100%;
     background: #081b29;
     animation: showRight 1s ease forwards;
-    animation-delay: 1.9s;
-    z-index: 2;
+    animation-delay: 1.6s;
 }
 
-.btn-box a{
-    position: relative;
+/**/
+.button-container {
+    display: flex; /* Makes the container a flex container */
+    justify-content: space-between; /* Adjusts spacing between buttons */
+    width: 60%; /* Set the width as needed */
+    margin-top: 20px; /* Optional: Adjust as needed for spacing */
+}
+
+.button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 150px;
-    height: 100%;
+    height: 50px;
     background: #00abf0;
     border: 2px solid #00abf0;
     border-radius: 8px;
@@ -163,155 +168,21 @@ body {
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
-    z-index: 1;
     overflow: hidden;
     transition: .5s;
+    margin-right: 5px; /* Reduced margin between buttons */
 }
 
-.btn-box a:hover{
+.button:hover {
     color: #00abf0;
+    background: #081b29; /* Dark blue hover background */
 }
 
-.btn-box a:nth-child(2){
-    background: transparent;
+.button:hover {
     color: #00abf0;
+    background: #081b29; /* Dark blue hover background */
 }
-
-.btn-box a:nth-child(2):hover{
-    color:#081b29;
-}
-
-.btn-box a:nth-child(2)::before{
-    background: #00abf0;
-}
-
-.btn-box a::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background: #081b29;
-    z-index: -1;
-    transition: .5s;
-}
-
-.btn-box a:hover::before{
-    width: 100%;
-
-}
-/* test */
-.btn-box b{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 100%;
-    background: #00abf0;
-    border: 2px solid #00abf0;
-    border-radius: 8px;
-    font-size: 19px;
-    color: #081b29;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-}
-
-.btn-box b:hover{
-    color: #00abf0;
-}
-
-.btn-box b:nth-child(1){
-    background: transparent;
-    color: #00abf0;
-}
-
-.btn-box b:nth-child(1):hover{
-    color:#081b29;
-}
-
-.btn-box b:nth-child(1)::before{
-    background: #00abf0;
-}
-
-.btn-box b::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background: #081b29;
-    z-index: -1;
-    transition: .5s;
-}
-
-.btn-box b:hover::before{
-    width: 100%;
-
-}
-
-/* btnbox c */
-.btn-box c{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 100%;
-    background: #00abf0;
-    border: 2px solid #00abf0;
-    border-radius: 8px;
-    font-size: 19px;
-    color: #081b29;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-}
-/*
-.btn-box c:hover{
-    color: #00abf0;
-}
-*/
-.btn-box c:nth-child(2){
-    background: transparent;
-    color: #00abf0;
-}
-
-
-.btn-box c:nth-child(2):hover{
-    color:#00abf0;
-}
-
-.btn-box c:nth-child(2)::before{
-    background: #00abf0;
-}
-
-.btn-box c::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background: #00abf0;
-    z-index: -1;
-    transition: .5s;
-}
-
-.btn-box c:hover::before{
-    width: 100%;
-
-}
-
+/**/
 .home-imgHover{
     position: absolute;
     top: 0;
@@ -324,8 +195,6 @@ body {
     animation-delay: 4s;
     pointer-events: none;
 }
-
-
 
 .home-imgHover:hover{
      background: #081b29;
@@ -344,7 +213,6 @@ body {
     animation-delay: 3s;
     z-index: 100;
 }
-/**/
 
 .recommended-songs {
     padding: 20px 10%;
@@ -372,6 +240,15 @@ body {
     border-radius: 5px;
     font-size: 18px;
     transition: background-color 0.3s, color 0.3s;
+}
+
+.img-size {
+    position: absolute;
+    right: 100px;
+    height: auto;
+    width: 400px; /* Adjust the width as needed */
+    /* Optional: Add more styling as needed */
+    margin-top: -360px;
 }
 
 @keyframes showRight{
