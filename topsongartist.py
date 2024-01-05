@@ -15,11 +15,14 @@ def get_users_top_songs(limit=5):
         artists = ', '.join([artist['name'] for artist in item['artists']])
         album_name = item['album']['name']
         album_cover_url = item['album']['images'][0]['url']  # Get the URL of the first (largest) album cover image
+        spotify_track_id = item['id']  # Spotify track ID
+        spotify_embed_url = f"https://open.spotify.com/embed/track/{spotify_track_id}"  # Spotify embed URL
         top_songs.append({
             'name': track_name, 
             'artists': artists,
             'album_name': album_name,
-            'album_cover_url': album_cover_url
+            'album_cover_url': album_cover_url,
+            'spotify_embed_url': spotify_embed_url  # Add Spotify embed URL to the dictionary
         })
     return top_songs
 
