@@ -44,6 +44,18 @@ body {
     border-radius: 8px; /* Optional for rounded corners */
 }
 
+/* Styling for Spotify embed iframe */
+.recommended-songs iframe {
+    margin-top: 10px;
+    border-radius: 8px; /* To match the style of images */
+    width: 100%; /* Responsive width */
+    max-width: 300px; /* Maximum width */
+    height: 80px; /* Fixed height */
+    border: none; /* Remove default border */
+    background-color: #081b29; /* Match the background color */
+}
+
+
 @media (max-width: 600px) {
     .recommended-songs li {
         margin-bottom: 15px;

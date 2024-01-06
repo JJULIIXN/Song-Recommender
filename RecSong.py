@@ -28,6 +28,8 @@ def recommend_songs(based_on_songs_ids):
             "artist": track['artists'][0]['name'],
             "album_cover_url": track['album']['images'][0]['url']  # The URL of the album cover
         }
+        song_info['spotify_track_id'] = track['id']
+        song_info['spotify_embed_url'] = f"https://open.spotify.com/embed/track/{track['id']}"
         recommended_songs.append(song_info)
     return recommended_songs
 
