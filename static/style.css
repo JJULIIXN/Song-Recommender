@@ -187,7 +187,7 @@ body {
     position: absolute;
     top: 0;
     right: 30px;
-    width: 500px;
+    width: 450px;
     height: 100%;
     background: transparent;
     transition: 3s;
@@ -197,7 +197,8 @@ body {
 }
 
 .home-imgHover:hover{
-     background: #081b29;
+     background: #ededed;
+    /* background: #081b29; */
      opacity: .8;
 }
 
@@ -244,11 +245,28 @@ body {
 
 .img-size {
     position: absolute;
-    right: 100px;
+    right: 340px;
     height: auto;
-    width: 400px; /* Adjust the width as needed */
-    /* Optional: Add more styling as needed */
-    margin-top: -360px;
+    width: 500px; 
+    margin-top: -400px;
+}
+
+.btn-box a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00abf0;
+    color: #081b29;
+    text-decoration: none;
+    font-size: 18 px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 0 10px; /* Optional: Adds spacing between buttons */
+    border: 2px solid #00abf0;
+}
+
+.btn-box a:hover {
+    background-color: #081b29; /* Slightly darker shade for hover effect */
+    color: #00abf0;
 }
 
 @keyframes showRight{
@@ -262,3 +280,4 @@ body {
         pointer-events: auto;
     }
 }
+
