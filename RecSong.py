@@ -19,7 +19,7 @@ def get_users_liked_songs():
 # Function to recommend songs based on user's liked songs
 def recommend_songs(based_on_songs_ids):
     seed_tracks_limited = based_on_songs_ids[:5]  # Limit the number of seed tracks
-    recommendations = sp.recommendations(seed_tracks=seed_tracks_limited, limit=10)
+    recommendations = sp.recommendations(seed_tracks=seed_tracks_limited, limit=12)
     recommended_songs = []
     for track in recommendations['tracks']:
         # Include the album cover URL in the output
