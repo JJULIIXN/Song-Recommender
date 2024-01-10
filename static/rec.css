@@ -62,8 +62,8 @@ body {
 .home-button {
     display: block;
     position: absolute;
-    top: 50px;
-    right: 30px;
+    top: 40px;
+    right: 25px;
     padding: 10px 20px;
     background-color: #00abf0;
     color: #ffffff;

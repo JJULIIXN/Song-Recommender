@@ -79,8 +79,5 @@ def top():
     top_artists = get_users_top_artists()
     return render_template('top.html', top_songs=top_songs, top_artists=top_artists)
 
-
-
-
 if __name__ == '__main__':
     app.run(debug=True)
